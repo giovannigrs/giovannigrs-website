@@ -1,2 +1,2 @@
-# Página de apresentção
+# Página de apresentação
 Demonstração de alguns projetos
