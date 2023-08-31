@@ -4,7 +4,7 @@ import { Footer } from "../Footer";
 
 export const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <main>
+    <main className="w-full">
       <Nav />
       <>{children}</>
       <Footer />
