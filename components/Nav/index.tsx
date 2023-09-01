@@ -1,37 +1,15 @@
-/*import Link from "next/link";
+/*import Link from "next/link";*/
 
-export const Nav = () => {
-  return (
-    <header className="w-full py-4 px-4 bg-blue-400">
-      <div className="navbar w-full md:w-3/5 mx-auto border-b-2">
-        <div className="flex items-center justify-center pb-4 text-base md:text-xl">
-          <Link href="/" className="px-4">
-            Home
-          </Link>
-          <Link href="/blog" className="px-4">
-            Blog
-          </Link>
-          <Link href="#" className="px-4">
-            About
-          </Link>
-          <Link href="#" className="px-4">
-            Contact
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-};*/
-
-import { Fragment } from "react";
+import { useEffect } from "react";
+import { useRouter } from 'next/router'
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"; //'@heroicons/react/24/outline'
 
-const navigation = [
+let navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Blog", href: "/blog", current: false },
-  { name: "About", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "Sobre", href: "#", current: false },
+  { name: "Contato", href: "/contato", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -39,17 +17,28 @@ function classNames(...classes: string[]) {
 }
 
 export const Nav = () => {
+  const router = useRouter();
+
+  function setCurrentPage() {
+    navigation.map((item) => {
+      if (item.href === router.pathname) item.current = true;
+      else item.current = false;
+    });
+  }
+
+  useEffect(() => { setCurrentPage(); }, [setCurrentPage]);
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }: { open: boolean }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 z-0 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
+                  <span className="sr-only">Abrir menu principal</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
@@ -61,7 +50,7 @@ export const Nav = () => {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=500"
                     alt="Your Company"
                   />
                 </div>
@@ -112,4 +101,4 @@ export const Nav = () => {
       )}
     </Disclosure>
   );
-}
+};
