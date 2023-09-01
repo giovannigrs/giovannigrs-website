@@ -19,7 +19,7 @@ export async function fetchAPI(
 
   if (json.errors) {
     console.error(json.errors);
-    throw new Error("Failed to fetch API");
+    //throw new Error("Failed to fetch API");
   }
-  return json.data;
+  return json?.data;
 }

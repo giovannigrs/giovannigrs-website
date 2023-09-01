@@ -20,7 +20,7 @@ export default function PostDetails({ post }: { post: any }) {
         ></div>
         <div className="z-20 text-center">
           <h1 className="text-2xl md:text-4xl mb-4">{post.title}</h1>
-          <p className="italic">By Jeffrey</p>
+          <p className="italic">Por Giovanni</p>
         </div>
       </div>
       <div
@@ -42,8 +42,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = await getPostBySlug(params?.slug as string);
-
-  return {
-    props: { post },
-  };
+  if(post){
+    return {
+      props: { post },
+    };
+  }
+  else{
+    let ret = null
+    return {
+      props: { ret },
+    };
+  }
 };
