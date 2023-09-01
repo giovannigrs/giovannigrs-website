@@ -10,7 +10,7 @@ export default function Blog({ posts }: { posts: any }) {
       <div className="container mx-auto py-8 min-h-full">
         <h3 className="text-xl">All my posts (5)</h3>
         <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {posts.map((post: any) => {
+          {posts && posts.map((post: any) => {
             return <PostBlock key={post.slug} post={post} />;
           })}
         </div>
