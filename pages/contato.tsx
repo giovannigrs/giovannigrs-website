@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
+import Link from "next/link";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -183,10 +184,10 @@ export default function Contato() {
               </Switch>
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
-              Selecionando aqui, você concorda com nossa{" "}
-              <a href="#" className="font-semibold text-blue-600">
-                política&nbsp;privacidade
-              </a>
+              Selecionando aqui, você concorda com a nossa{" "}
+              <Link href="/politica-de-privacidade" className="font-semibold text-blue-600">
+                política&nbsp;de&nbsp;privacidade
+              </Link>
               .
             </Switch.Label>
           </Switch.Group>

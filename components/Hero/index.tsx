@@ -113,20 +113,22 @@ export const Hero = () => {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Data to enrich your online business
+              Desenvolvimento de sites Wordpress
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Grow your business using data analytics.
+              Conheça os projetos desenvolvidos em diversas tecnologias, caso
+              tenha interesse em desenvolver seu projeto comigo envie uma
+              mensagem clicando abaixo.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
                 className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
-                Começar Agora!
+                Enivar Mensagem Agora!
               </a>
               <a
-              aria-disabled="true"
+                aria-disabled="true"
                 href="#"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
@@ -150,32 +152,4 @@ export const Hero = () => {
       </div>
     </div>
   );
-}
-
-/*import Link from "next/link";
-
-export const Hero = () => {
-  return (
-    <section className="container mx-auto py-12 text-center border-b">
-      <div>
-        <h1 className="text-2xl md:text-4xl">
-          Hey, <strong>welcome to {"Jeffrey's"} blog</strong>. See my thoughts,
-          stories and ideas.
-        </h1>
-        <p className="my-6 text-lg">
-          Follow me on{" "}
-          <Link
-            href="https://twitter.com/JeffreySunny1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-blue-500"
-          >
-            Twitter
-          </Link>
-          .
-        </p>
-        <p className="text-center">😎😎😎</p>
-      </div>
-    </section>
-  );
-};*/
+};
