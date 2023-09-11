@@ -6,6 +6,8 @@ import Link from "next/link";
 import { SEO } from "@/components/SEO";
 
 export default function HomePage({ posts }: { posts: any }) {
+  const formacoes = [];
+  const experiencias = [];
   const projetos = [
     {
       id: 1,
@@ -28,16 +30,24 @@ export default function HomePage({ posts }: { posts: any }) {
     <>
       <SEO
         title="Sobre mim"
-        description="Olá, sou o Giovanni Garcia Ribeiro de Souza, sou engenheiro de computação e desenvolvedor de software..."
+        description="Olá, sou o Giovanni Garcia Ribeiro de Souza, engenheiro de computação e desenvolvedor de software..."
       />
       <div className="bg-slate-100 py-12 sm:py-6">
         <div className="mx-auto bg-slate-50 max-w-7xl px-6 py-12 rounded-md shadow lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Resumo
+            </h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Escrever resumo.
+            </p>
+          </div>
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Formação
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              Veja alguns dos projetos finalizados.
+              Experiência acadêmica.
             </p>
           </div>
           <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 py-10 sm:py-16 lg:mx-0 lg:max-w-none ">
@@ -77,7 +87,7 @@ export default function HomePage({ posts }: { posts: any }) {
               Experiência
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              Veja alguns dos projetos finalizados.
+              Trabalhos desenvolvidos e posições relevantes.
             </p>
           </div>
           <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 py-10  sm:py-16 lg:mx-0 lg:max-w-none ">
