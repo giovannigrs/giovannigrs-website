@@ -122,7 +122,7 @@ export const Hero = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href=" https://wa.me//5515997315750?text=Encontrei%20seu%20contato%20no%20site%20e%20gostaria%20de%20criar%20meu%20site"
                 className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 Enivar Mensagem Agora!
