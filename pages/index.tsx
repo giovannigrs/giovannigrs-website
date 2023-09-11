@@ -21,7 +21,7 @@ export default function HomePage({ posts }: { posts: any }) {
       description:
         "Site institucional do agente de propriedade industrial Bruno Armstrong.",
       author: { name: "Giovanni Garcia" },
-      href: "https://constantemarcas.com.br/",
+      href: "https://constantemarcas.com/",
     },
   ];
   return (

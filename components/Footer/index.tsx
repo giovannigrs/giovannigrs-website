@@ -16,7 +16,7 @@ export const Footer = () => {
       href: "/blog",
     },
     {
-      id: 2,
+      id: 3,
       titulo: "Contato",
       href: "/contato",
     },
@@ -29,8 +29,8 @@ export const Footer = () => {
   return (
     <footer className="py-4 bg-gray-800 text-white">
       <div className="container mx-auto">
-        <div className="py-6 grid items-stretch grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col my-4">
+        <div className="py-6 px-4 grid items-stretch grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+          <div className="flex flex-col my-4 text-center items-center justify-center md:text-left md:justify-start md:items-start">
             <h3 className="text-xl">Grsouza</h3>
             <p className="text-gray-300">
               Serviços de Desenvolvimentos de sites Wordpress, otimização SEO de
@@ -42,7 +42,7 @@ export const Footer = () => {
             <small>&copy; GRsouza {new Date().getFullYear()}</small>
           </div>
 
-          <div className="flex flex-col items-center justify-start my-4">
+          <div className="flex flex-col my-4 justify-start items-center">
             <h3 className="text-xl font-bold uppercase text-gray-400 py-2">
               Links
             </h3>
@@ -58,7 +58,7 @@ export const Footer = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center justify-start my-4">
+          <div className="flex flex-col my-4 justify-start items-center">
             <h3 className="text-xl font-bold uppercase text-gray-400 py-2">
               Redes Sociais
             </h3>
