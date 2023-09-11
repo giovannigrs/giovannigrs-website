@@ -46,6 +46,6 @@ export async function getPostBySlug(slug: string) {
         },
       }
     );
-  
+
     return data?.post;
   }
