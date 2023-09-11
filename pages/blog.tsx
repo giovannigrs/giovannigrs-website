@@ -20,8 +20,12 @@ export default function Blog({ posts }: { posts: any }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getPosts(100); // retrieve first 100 posts
-
+  let posts = await getPosts(100); // retrieve first 100 posts
+  
+  if(!posts){
+    posts = null;
+  }
+  
   return {
     props: {
       posts,

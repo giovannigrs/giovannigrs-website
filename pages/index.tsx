@@ -3,10 +3,15 @@ import Image from "next/image";
 import { Hero } from "@/components/Hero";
 import { GlobeAmericasIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { SEO } from "@/components/SEO";
 
 export default function HomePage({ posts }: { posts: any }) {
   return (
     <>
+    <SEO
+        title="Grsouza Desenvolvimento"
+        description="Desenvolvedor de sites"
+      />
       <Hero />
       <div className=" bg-slate-200">
         <div className="container mx-auto px-4 py-5">
