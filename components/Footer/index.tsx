@@ -30,7 +30,7 @@ export const Footer = () => {
     <footer className="py-4 bg-gray-800 text-white">
       <div className="container mx-auto">
         <div className="py-6 px-4 grid items-stretch grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col my-4 text-center items-center justify-center md:text-left md:justify-start md:items-start">
+          <div className="flex flex-col my-4 text-center items-center justify-center col-span-1 md:text-left md:justify-start md:items-start md:col-span-2">
             <h3 className="text-xl">Grsouza</h3>
             <p className="text-gray-300">
               Serviços de Desenvolvimentos de sites Wordpress, otimização SEO de
