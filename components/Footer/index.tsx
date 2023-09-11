@@ -7,16 +7,21 @@ export const Footer = () => {
   const links = [
     {
       id: 1,
-      titulo: "LinkedIn",
-      href: "https://www.linkedin.com/in/giovanni-garcia-ribeiro-de-souza-0263269a",
+      titulo: "Home",
+      href: "/",
     },
     {
       id: 2,
-      titulo: "GitHub",
-      href: "https://github.com/giovannigrs/",
+      titulo: "Blog",
+      href: "/blog",
     },
     {
-      id: 3,
+      id: 2,
+      titulo: "Contato",
+      href: "/contato",
+    },
+    {
+      id: 4,
       titulo: "Política de Privacidade",
       href: "/politica-de-privacidade",
     },
