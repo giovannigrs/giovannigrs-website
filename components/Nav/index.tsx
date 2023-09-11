@@ -4,12 +4,14 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"; //'@heroicons/react/24/outline'
+import SiteLogo from "@/assets/favicons/android-chrome-192x192.png";
 import Link from "next/link";
+import Image from "next/image";
 
 let navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Blog", href: "/blog", current: false },
-  { name: "Sobre", href: "#", current: false },
+  { name: "Sobre", href: "/sobre-mim", current: false },
   { name: "Contato", href: "/contato", current: false },
 ];
 
@@ -51,10 +53,11 @@ export const Nav = () => {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Link href={"/"} title="GRsouza - Home">
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=500"
-                      alt="Your Company"
+                    <Image
+                      width={32}
+                      height={32}
+                      src={SiteLogo.src}
+                      alt="Grsouza desenvolvimento de sites wordpress"
                     />
                   </Link>
                 </div>
