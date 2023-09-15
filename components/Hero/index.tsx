@@ -127,6 +127,7 @@ export const Hero = () => {
               >
                 Enivar Mensagem Agora!
               </a>
+              {/** 
               <a
                 aria-disabled="true"
                 href="#"
@@ -134,6 +135,7 @@ export const Hero = () => {
               >
                 Saiba Mais <span aria-hidden="true">?</span>
               </a>
+              */}
             </div>
           </div>
         </div>
