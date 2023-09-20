@@ -72,11 +72,12 @@ export default function HomePage({ posts }: { posts: any }) {
   return (
     <>
       <SEO
-        title="Sobre mim"
-        description="Olá, sou o Giovanni Garcia Ribeiro de Souza, engenheiro de computação e desenvolvedor de software..."
+        title="Currículo"
+        description="Giovanni Garcia Ribeiro de Souza, engenheiro de computação e desenvolvedor .net e SQL. Além de conhecimentos em Wordpress, Reac.js e Next.js, Docker, Python e Django. Saiba mais..."
       />
       <div className="bg-slate-100 py-12 sm:py-6">
         <div className="mx-auto bg-white max-w-7xl px-6 py-12 rounded-md shadow lg:px-8">
+          {/** Resumo */}
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Resumo
@@ -85,51 +86,7 @@ export default function HomePage({ posts }: { posts: any }) {
               Escrever resumo.
             </p>
           </div>
-          <div className="mx-auto max-w-2xl mt-8 lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Formação
-            </h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-              Experiência acadêmica.
-            </p>
-          </div>
-          <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 border-t border-gray-200 lg:mx-0 lg:max-w-none ">
-            {formacoes.map((forma) => (
-              <div
-                key={forma.id}
-                className="flex flex-col items-start justify-between p-4"
-              >
-                <div className="group relative">
-                  {/** Titulo */}
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    {forma.title}
-                  </h3>
-                  {/** Identificacao instituicao */}
-                  <div className="flex items-start">
-                    <p className="mt-5 text-base font-semibold leading-6 text-gray-600">
-                      Instituição:
-                    </p>
-                    <p className="mt-5 pl-2 text-base leading-6 text-gray-600">
-                      {forma.institution}
-                    </p>
-                  </div>
-                  {/** Periodo */}
-                  <div className="flex items-start">
-                    <p className="mt-5 text-base font-semibold leading-6 text-gray-600">
-                      Período:
-                    </p>
-                    <p className="mt-5 pl-2 text-base leading-6 text-gray-600">
-                      {forma.start.toLocaleDateString("pt-br")} -{" "}
-                      {forma.end.toLocaleDateString("pt-br") !==
-                      new Date().toLocaleDateString("pt-br")
-                        ? forma.end.toLocaleDateString("pt-br")
-                        : "atual"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/** Experiencia profissional */}
           <div className="mx-auto max-w-2xl mt-8 lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Experiência
@@ -181,6 +138,7 @@ export default function HomePage({ posts }: { posts: any }) {
               </div>
             ))}
           </div>
+          {/** Projetos desenvolvidos */}
           <div className="mx-auto max-w-2xl mt-8 lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Projetos
@@ -216,6 +174,52 @@ export default function HomePage({ posts }: { posts: any }) {
                     >
                       Ver projeto
                     </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/** Formação academica */}
+          <div className="mx-auto max-w-2xl mt-8 lg:mx-0">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Formação
+            </h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Experiência acadêmica.
+            </p>
+          </div>
+          <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 border-t border-gray-200 lg:mx-0 lg:max-w-none ">
+            {formacoes.map((forma) => (
+              <div
+                key={forma.id}
+                className="flex flex-col items-start justify-between p-4"
+              >
+                <div className="group relative">
+                  {/** Titulo */}
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                    {forma.title}
+                  </h3>
+                  {/** Identificacao instituicao */}
+                  <div className="flex items-start">
+                    <p className="mt-5 text-base font-semibold leading-6 text-gray-600">
+                      Instituição:
+                    </p>
+                    <p className="mt-5 pl-2 text-base leading-6 text-gray-600">
+                      {forma.institution}
+                    </p>
+                  </div>
+                  {/** Periodo */}
+                  <div className="flex items-start">
+                    <p className="mt-5 text-base font-semibold leading-6 text-gray-600">
+                      Período:
+                    </p>
+                    <p className="mt-5 pl-2 text-base leading-6 text-gray-600">
+                      {forma.start.toLocaleDateString("pt-br")} -{" "}
+                      {forma.end.toLocaleDateString("pt-br") !==
+                      new Date().toLocaleDateString("pt-br")
+                        ? forma.end.toLocaleDateString("pt-br")
+                        : "atual"}
+                    </p>
                   </div>
                 </div>
               </div>
